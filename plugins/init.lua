@@ -9,7 +9,6 @@ return {
   ["ethanholz/nvim-lastplace"] = require "user.plugins.nvim-lastplace",
   ["famiu/bufdelete.nvim"] = { disable = true },
   ["folke/zen-mode.nvim"] = require "user.plugins.zen-mode",
-  ["goolord/alpha-nvim"] = { disable = true },
   ["hrsh7th/cmp-calc"] = require "user.plugins.cmp-calc",
   ["hrsh7th/cmp-emoji"] = require "user.plugins.cmp-emoji",
   ["hrsh7th/cmp-omni"] = require "user.plugins.cmp-omni",
@@ -26,7 +25,6 @@ return {
   ["mtikekar/nvim-send-to-term"] = require "user.plugins.nvim-send-to-term",
   ["mxsdev/nvim-dap-vscode-js"] = require "user.plugins.nvim-dap-vscode-js",
   ["nanotee/sqls.nvim"] = require "user.plugins.sqls",
-  ["numToStr/Comment.nvim"] = { disable = true },
   ["nvim-telescope/telescope-bibtex.nvim"] = require "user.plugins.telescope-bibtex",
   ["nvim-telescope/telescope-file-browser.nvim"] = require "user.plugins.telescope-file-browser",
   ["nvim-telescope/telescope-hop.nvim"] = require "user.plugins.telescope-hop",
@@ -41,4 +39,5 @@ return {
   ["wakatime/vim-wakatime"] = require "user.plugins.vim-wakatime",
   ["ziontee113/syntax-tree-surfer"] = require "user.plugins.syntax-tree-surfer",
   ["nvim-neo-tree/neo-tree.nvim"] = require "user.plugins.neo-tree",
+  ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
 }

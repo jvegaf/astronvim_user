@@ -20,6 +20,7 @@ return {
     ["<leader>sm"] = false,
     ["<leader>sn"] = false,
     ["<leader>sr"] = false,
+    ["<leader>w"] = { ":BrowserSearch [text]<cr>", desc = "Search on web" },
     -- resize with arrows
     ["<Up>"] = { function() require("smart-splits").resize_up(2) end, desc = "Resize split up" },
     ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
@@ -58,6 +59,7 @@ return {
     -- navigating wrapped lines
     j = { "gj", desc = "Navigate down" },
     k = { "gk", desc = "Navigate down" },
+    ["<leader>w"] = { ":'<,'>BrowserSearch<cr>", desc = "Search on web" },
   },
   -- terminal mappings
   t = {
