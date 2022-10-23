@@ -12,8 +12,6 @@ return {
       ["r"] = { "<cmd>SendHere<cr>", "Set REPL" },
       ["."] = { "<cmd>cd %:p:h<cr>", "Set CWD" },
       ["P"] = { function() utils.toggle_presence() end, "Toggle Presence" },
-      ["w"] = { "<Plug>SearchNormal", "Search on web" },
-
       a = {
         name = "Annotate",
         ["<cr>"] = { function() require("neogen").generate() end, "Current" },
@@ -276,7 +274,6 @@ return {
         name = "Debugger",
         e = { function() require("dapui").eval() end, "Evaluate Line" },
       },
-      ["w"] = { "<Plug>SearchVisual", "Search on web" },
     },
   },
 }

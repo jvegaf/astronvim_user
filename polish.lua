@@ -4,9 +4,9 @@ return function()
   local is_win = has "win32"
   local is_lin = has "linux"
 
-  if is_win then require "user/windows" end
+  if is_win then require "user.windows" end
 
-  if is_lin then require "user/linux" end
+  if is_lin then require "user.linux" end
 
   vim.filetype.add {
     extension = {
