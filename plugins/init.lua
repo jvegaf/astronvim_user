@@ -36,4 +36,5 @@ return {
   ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
   ["normen/vim-pio"] = require "user.plugins.vim-pio",
   ["iamcco/markdown-preview.nvim"] = require "user.plugins.markdown-preview",
+  ["Pocco81/auto-save.nvim"] = require "user.plugins.auto-save",
 }
