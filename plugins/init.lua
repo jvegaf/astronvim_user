@@ -40,5 +40,5 @@ return {
   ["ziontee113/syntax-tree-surfer"] = require "user.plugins.syntax-tree-surfer",
   ["nvim-neo-tree/neo-tree.nvim"] = require "user.plugins.neo-tree",
   ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
-  ["jiriks74/vim-pio"] = require "user.plugins.vim-pio",
+  ["normen/vim-pio"] = require "user.plugins.vim-pio",
 }
