@@ -25,7 +25,6 @@ return {
         name = "Telescope",
         ["?"] = { "<cmd>Telescope help_tags<cr>", "Find Help" },
         ["'"] = { "<cmd>Telescope marks<cr>", "Marks" },
-        B = { "<cmd>Telescope bibtex<cr>", "BibTeX" },
         e = { "<cmd>Telescope file_browser<cr>", "Explorer" },
         h = { "<cmd>Telescope oldfiles<cr>", "History" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
@@ -38,70 +37,15 @@ return {
         t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
       },
 
-      m = {
-        name = "Compiler",
-        k = {
-          function()
-            vim.cmd "silent! write"
-            local filename = vim.fn.expand "%:t"
-            utils.async_run(
-              { "compiler", vim.fn.expand "%:p" },
-              function() utils.quick_notification("Compiled " .. filename) end
-            )
-          end,
-          "Compile",
-        },
-        a = {
-          function()
-            vim.notify "Autocompile Started"
-            utils.async_run(
-              { "autocomp", vim.fn.expand "%:p" },
-              function() utils.quick_notification "Autocompile stopped" end
-            )
-          end,
-          "Auto Compile",
-        },
-        v = { function() vim.fn.jobstart { "opout", vim.fn.expand "%:p" } end, "View Output" },
-        b = {
-          function()
-            local filename = vim.fn.expand "%:t"
-            utils.async_run({
-              "pandoc",
-              vim.fn.expand "%",
-              "--pdf-engine=xelatex",
-              "--variable",
-              "urlcolor=blue",
-              "-t",
-              "beamer",
-              "-o",
-              vim.fn.expand "%:r" .. ".pdf",
-            }, function() utils.quick_notification("Compiled " .. filename) end)
-          end,
-          "Compile Beamer",
-        },
-        p = {
-          function()
-            local pdf_path = vim.fn.expand "%:r" .. ".pdf"
-            if vim.fn.filereadable(pdf_path) == 1 then vim.fn.jobstart { "pdfpc", pdf_path } end
-          end,
-          "Present Output",
-        },
-        l = { function() utils.toggle_qf() end, "Logs" },
-        t = { "<cmd>TexlabBuild<cr>", "LaTeX" },
-        f = { "<cmd>TexlabForward<cr>", "Forward Search" },
-      },
-
       d = {
         name = "Document",
         n = { "<cmd>enew<cr>", "New File" },
         s = { "<cmd>setlocal spell!<cr>", "Toggle Spelling" },
         t = { "<cmd>TableModeToggle<cr>", "Toggle Table Mode" },
         p = { "<cmd>setlocal paste!<cr>", "Toggle Paste" },
-        b = { "<cmd>read !getbib -c<cr>", "Get Bib" },
         c = { function() utils.vim_opt_toggle("conceallevel", 2, 0, "Conceal") end, "Toggle Conceal" },
         w = { function() utils.vim_opt_toggle("wrap", true, false, "Soft Wrap") end, "Toggle Soft Wrapping" },
         W = { function() utils.vim_opt_toggle("textwidth", 80, 0, "Hard Wrap") end, "Toggle Hard Wrapping" },
-        m = { function() require("nabla").popup() end, "Preview Math" },
       },
 
       h = {
@@ -117,31 +61,6 @@ return {
         name = "Surf",
         s = { "<cmd>STSSelectMasterNode<cr>", "Surf" },
         S = { "<cmd>STSSelectCurrentNode<cr>", "Surf Node" },
-      },
-
-      n = {
-        name = "Notes",
-        b = { function() require "zk.commands" "ZkBacklinks"() end, "Backlink Picker" },
-        d = { function() require "zk.commands" "ZkCd"() end, "Change Directory" },
-        r = { function() require "zk.commands" "ZkIndex"() end, "Refresh Index" },
-        l = { function() require "zk.commands" "ZkLinks"() end, "Link Picker" },
-        s = { function() require("zk.commands").get "ZkNotes" { sort = { "modified" } } end, "Search" },
-        n = {
-          function() require("zk.commands").get "ZkNew" { dir = "personal", title = vim.fn.input "Title: " } end,
-          "New Personal Note",
-        },
-        N = {
-          function() require("zk.commands").get "ZkNew" { dir = "work", title = vim.fn.input "Title: " } end,
-          "New Work Note",
-        },
-        t = { function() require("zk.commands").get "ZkTags"() end, "Tags" },
-        i = { "<Plug>(simple-todo-new-list-item)", "Insert Todo" },
-        I = { "<Plug>(simple-todo-new-list-item-start-of-line)", "Convert to Todo" },
-        o = { "<Plug>(simple-todo-below)", "Insert Todo Below" },
-        O = { "<Plug>(simple-todo-above)", "Insert Todo Above" },
-        x = { "<Plug>(simple-todo-mark-as-done)", "Mark Done" },
-        X = { "<Plug>(simple-todo-mark-as-undone)", "Mark Undone" },
-        ["<tab>"] = { "<Plug>(simple-todo-mark-switch)", "Toggle Todo" },
       },
 
       x = {
@@ -245,30 +164,6 @@ return {
         l = { "<cmd>HopLine<cr>", "Line" },
         p = { "<cmd>HopPattern<cr>", "Pattern" },
         w = { "<cmd>HopWord<cr>", "Word" },
-      },
-
-      n = {
-        name = "Notes",
-        s = { ":'<,'>lua require('zk.commands').get('ZkMatch')()<cr>", "Search" },
-        n = {
-          ":'<,'>lua require('zk.commands').get('ZkNewFromTitleSelection')({ dir = 'personal' })<cr>",
-          "New Personal Note From Title",
-        },
-        N = {
-          ":'<,'>lua require('zk.commands').get('ZkNewFromTitleSelection')({ dir = 'work' })<cr>",
-          "New Work Note From Title",
-        },
-        W = {
-          ":'<,'>lua require('zk.commands').get('ZkNewFromContentSelection')({ dir = 'work', title = vim.fn.input('Title: ') })<cr>",
-          "New Work Note From Content",
-        },
-        C = {
-          ":'<,'>lua require('zk.commands').get('ZkNewFromContentSelection')({ dir = 'personal', title = vim.fn.input('Title: ') })<cr>",
-          "New Personal Note From Content",
-        },
-        x = { "<Plug>(simple-todo-mark-as-done)", "Mark Done" },
-        X = { "<Plug>(simple-todo-mark-as-undone)", "Mark Undone" },
-        ["<tab>"] = { "<Plug>(simple-todo-mark-switch)", "Toggle Todo" },
       },
 
       x = {
