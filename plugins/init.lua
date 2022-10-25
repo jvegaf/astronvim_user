@@ -39,6 +39,6 @@ return {
   ["wakatime/vim-wakatime"] = require "user.plugins.vim-wakatime",
   ["ziontee113/syntax-tree-surfer"] = require "user.plugins.syntax-tree-surfer",
   ["nvim-neo-tree/neo-tree.nvim"] = require "user.plugins.neo-tree",
-  ["gko/vim-g"] = require "user.plugins.vim-g",
+  ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
   ["jiriks74/vim-pio"] = require "user.plugins.vim-pio",
 }

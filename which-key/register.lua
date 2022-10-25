@@ -34,6 +34,7 @@ return {
         n = { "<cmd>Telescope notify<cr>", "Notifications" },
         p = { "<cmd>Telescope project<cr>", "Projects" },
         r = { "<cmd>Telescope registers<cr>", "Registers" },
+        s = { "<cmd>BrowserSearch<cr>", "Browser Search" },
         t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
       },
 

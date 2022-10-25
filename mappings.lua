@@ -21,10 +21,10 @@ return {
     ["<leader>sn"] = false,
     ["<leader>sr"] = false,
     -- resize with arrows
-    ["<Up>"] = { function() require("smart-splits").resize_up(2) end, desc = "Resize split up" },
-    ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
-    ["<Left>"] = { function() require("smart-splits").resize_left(2) end, desc = "Resize split left" },
-    ["<Right>"] = { function() require("smart-splits").resize_right(2) end, desc = "Resize split right" },
+    -- ["<Up>"] = { function() require("smart-splits").resize_up(2) end, desc = "Resize split up" },
+    -- ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
+    -- ["<Left>"] = { function() require("smart-splits").resize_left(2) end, desc = "Resize split left" },
+    -- ["<Right>"] = { function() require("smart-splits").resize_right(2) end, desc = "Resize split right" },
     -- navigating wrapped lines
     j = { "gj", desc = "Navigate down" },
     k = { "gk", desc = "Navigate down" },
@@ -48,18 +48,32 @@ return {
     ["Cl"] = { "<cmd>GitConflictListQf<cr>", desc = "List Conflicts" },
     ["]C"] = { "<Plug>(git-conflict-next-conflict)", desc = "Next conflict" },
     ["[C"] = { "<Plug>(git-conflict-prev-conflict)", desc = "Previous conflict" },
-    -- Google Search
-    ["<C-g>"] = { "<cmd>G<cr>", desc = "Search on Google" },
+    ["<A-j>"] = { "<cmd> :m .+1<CR>==", desc = "move line down" },
+    ["<A-k>"] = { "<cmd> :m .-2<CR>==", desc = "move line up" },
+    ["<A-Down>"] = { "<cmd> :m .+1<CR>==", desc = "move line down" },
+    ["<A-Up>"] = { "<cmd> :m .-2<CR>==", desc = "move line up" },
   },
   i = {
     -- type template string
     ["<c-CR>"] = { "<++>", desc = "Insert template string" },
     ["<S-Tab>"] = { "<C-V><Tab>", desc = "Tab character" },
+    -- move lines
+    ["<A-j>"] = { "<Esc><cmd> :m .+1<CR>==gi", desc = "move line down" },
+    ["<A-k>"] = { "<Esc><cmd> :m .-2<CR>==gi", desc = "move line up" },
+    ["<A-Down>"] = { "<Esc><cmd> :m .+1<CR>==gi", desc = "move line down" },
+    ["<A-Up>"] = { "<Esc><cmd> :m .-2<CR>==gi", desc = "move line up" },
   },
   v = {
     -- navigating wrapped lines
     j = { "gj", desc = "Navigate down" },
     k = { "gk", desc = "Navigate down" },
+    -- Google Search
+    s = { ":'<,'>BrowserSearch<cr>", desc = "Browser Search" },
+    -- move lines
+    ["<A-j>"] = { "<cmd> :m '>+1<CR>gv=gv", desc = "move line down" },
+    ["<A-k>"] = { "<cmd> :m '<-2<CR>gv=gv", desc = "move line up" },
+    ["<A-Down>"] = { "<cmd> :m '>+1<CR>gv=gv", desc = "move line down" },
+    ["<A-Up>"] = { "<cmd> :m '<-2<CR>gv=gv", desc = "move line up" },
   },
   -- terminal mappings
   t = {
