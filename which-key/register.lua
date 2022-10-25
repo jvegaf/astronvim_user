@@ -57,6 +57,11 @@ return {
         w = { "<cmd>HopWord<cr>", "Word" },
       },
 
+      m = {
+        name = "MarkDown",
+        p = { "<cmd>MarkDownPreview<cr>", "MarkDown Preview" },
+      },
+
       s = {
         name = "Surf",
         s = { "<cmd>STSSelectMasterNode<cr>", "Surf" },

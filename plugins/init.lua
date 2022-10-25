@@ -35,4 +35,5 @@ return {
   ["nvim-neo-tree/neo-tree.nvim"] = require "user.plugins.neo-tree",
   ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
   ["normen/vim-pio"] = require "user.plugins.vim-pio",
+  ["iamcco/markdown-preview.nvim"] = require "user.plugins.markdown-preview",
 }
