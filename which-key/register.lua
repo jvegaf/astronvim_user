@@ -68,6 +68,12 @@ return {
         S = { "<cmd>STSSelectCurrentNode<cr>", "Surf Node" },
       },
 
+      T = {
+        name = "Theme",
+        d = { ":set background=dark<cr>", "Dark" },
+        l = { ":set background=light<cr>", "Light" },
+      },
+
       x = {
         name = "Debugger",
         b = { function() require("dap").toggle_breakpoint() end, "Toggle Breakpoint" },
