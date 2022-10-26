@@ -69,9 +69,19 @@ return {
       },
 
       T = {
+        name = "+Trouble",
+        r = { "<cmd>Trouble lsp_references<cr>", "References" },
+        f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+        d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+        q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+        l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+        w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+      },
+
+      w = {
         name = "Theme",
-        d = { ":set background=dark<cr>", "Dark" },
-        l = { ":set background=light<cr>", "Light" },
+        d = { ":colorscheme carbonfox<cr>", "Dark" },
+        l = { ":colorscheme dayfox<cr>", "Light" },
       },
 
       x = {

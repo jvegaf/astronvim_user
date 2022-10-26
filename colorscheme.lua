@@ -1,1 +1,9 @@
-return "PaperColor"
+return "carbonfox"
+
+-- dayfox (light)
+-- dawnfox (light)
+--
+-- duxfox
+-- nordfox
+-- terafox
+-- carbonfox

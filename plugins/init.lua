@@ -37,5 +37,5 @@ return {
   ["normen/vim-pio"] = require "user.plugins.vim-pio",
   ["iamcco/markdown-preview.nvim"] = require "user.plugins.markdown-preview",
   ["Pocco81/auto-save.nvim"] = require "user.plugins.auto-save",
-  ["NLKNguyen/papercolor-theme"] = require "user.plugins.papercolor",
+  ["folke/trouble.nvim"] = require "user.plugins.trouble",
 }
