@@ -29,7 +29,7 @@ return {
     j = { "gj", desc = "Navigate down" },
     k = { "gk", desc = "Navigate down" },
     -- easy splits
-    ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
+    -- ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
     -- better increment/decrement
     ["-"] = { "<c-x>", desc = "Descrement number" },

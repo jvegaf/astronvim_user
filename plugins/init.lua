@@ -38,4 +38,6 @@ return {
   ["iamcco/markdown-preview.nvim"] = require "user.plugins.markdown-preview",
   ["Pocco81/auto-save.nvim"] = require "user.plugins.auto-save",
   ["folke/trouble.nvim"] = require "user.plugins.trouble",
+  ["rainbowhxch/accelerated-jk.nvim"] = require "user.plugins.accelerated-jk",
+  ["mg979/vim-visual-multi"] = require "user.plugins.vim-visual-multi",
 }
