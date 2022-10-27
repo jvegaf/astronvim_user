@@ -1,10 +1,6 @@
 return {
   n = {
     -- disable default bindings
-    ["<C-Down>"] = false,
-    ["<C-Left>"] = false,
-    ["<C-Right>"] = false,
-    ["<C-Up>"] = false,
     ["<C-q>"] = false,
     ["<C-s>"] = false,
     ["<leader>c"] = false,
@@ -20,6 +16,12 @@ return {
     ["<leader>sm"] = false,
     ["<leader>sn"] = false,
     ["<leader>sr"] = false,
+    -- Better window navigation
+    ["<C-Left>"] = { function() require("smart-splits").move_cursor_left() end, desc = "Move to left split" },
+    ["<C-Down>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" },
+    ["<C-Up>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" },
+    ["<C-Right>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" },
+
     -- resize with arrows
     -- ["<Up>"] = { function() require("smart-splits").resize_up(2) end, desc = "Resize split up" },
     -- ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
@@ -35,10 +37,10 @@ return {
     ["-"] = { "<c-x>", desc = "Descrement number" },
     ["+"] = { "<c-a>", desc = "Increment number" },
     -- Treesitter Surfer
-    ["<c-down>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
-    ["<c-right>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
-    ["<c-up>"] = { "<cmd>STSSwapUpNormal<cr>", desc = "Swap previous tree-sitter object" },
-    ["<c-left>"] = { "<cmd>STSSwapUpNormal<cr>", desc = "Swap previous tree-sitter object" },
+    -- ["<c-down>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
+    -- ["<c-right>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
+    -- ["<c-up>"] = { "<cmd>STSSwapUpNormal<cr>", desc = "Swap previous tree-sitter object" },
+    -- ["<c-left>"] = { "<cmd>STSSwapUpNormal<cr>", desc = "Swap previous tree-sitter object" },
     -- Git Conflict
     ["Cc"] = { "<Plug>(git-conflict-ours)", desc = "Take Current" },
     ["Ci"] = { "<Plug>(git-conflict-theirs)", desc = "Take Incoming" },
