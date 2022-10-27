@@ -74,6 +74,7 @@ return {
         f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
         d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
         q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+        t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
         l = { "<cmd>Trouble loclist<cr>", "LocationList" },
         w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
       },

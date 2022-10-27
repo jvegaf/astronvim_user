@@ -21,7 +21,7 @@ return {
     ["<C-Down>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" },
     ["<C-Up>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" },
     ["<C-Right>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" },
-
+    ["<C-t>"] = { "<cmd>TroubleToggle<cr>", desc = "Trouble Toggle" },
     -- resize with arrows
     -- ["<Up>"] = { function() require("smart-splits").resize_up(2) end, desc = "Resize split up" },
     -- ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
