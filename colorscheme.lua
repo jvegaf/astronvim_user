@@ -1,4 +1,4 @@
-return "carbonfox"
+return "nightfox"
 
 -- dayfox (light)
 -- dawnfox (light)
@@ -7,3 +7,4 @@ return "carbonfox"
 -- nordfox
 -- terafox
 -- carbonfox
+-- nightfox

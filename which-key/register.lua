@@ -80,7 +80,7 @@ return {
 
       w = {
         name = "Theme",
-        d = { ":colorscheme carbonfox<cr>", "Dark" },
+        d = { ":colorscheme nightfox<cr>", "Dark" },
         l = { ":colorscheme dayfox<cr>", "Light" },
       },
 
