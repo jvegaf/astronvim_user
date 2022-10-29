@@ -1,3 +1,3 @@
 return {
-  config = function() require("auto-save").setup() end,
+  config = function() require "user.plugins.auto-save.config" end,
 }

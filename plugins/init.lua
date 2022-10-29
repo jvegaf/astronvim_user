@@ -30,7 +30,6 @@ return {
   ["phaazon/hop.nvim"] = require "user.plugins.hop",
   ["rcarriga/nvim-dap-ui"] = require "user.plugins.dapui",
   ["theHamsta/nvim-dap-virtual-text"] = require "user.plugins.nvim-dap-virtual-text",
-  ["wakatime/vim-wakatime"] = require "user.plugins.vim-wakatime",
   ["ziontee113/syntax-tree-surfer"] = require "user.plugins.syntax-tree-surfer",
   ["nvim-neo-tree/neo-tree.nvim"] = require "user.plugins.neo-tree",
   ["voldikss/vim-browser-search"] = require "user.plugins.vim-browser-search",
