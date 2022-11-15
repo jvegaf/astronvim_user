@@ -211,6 +211,7 @@ local config = {
       ["<S-tab>"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer tab" },
       ["<M-up>"] = { ":m .-2<CR>==", desc = "move line up" },
       ["<M-down>"] = { ":m .+1<CR>==", desc = "move line down" },
+      ["<M-c>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
     },
     v = {
       ["<M-up>"] = { ":m '<-2<CR>gv=gv", desc = "move line up" },
@@ -260,6 +261,14 @@ local config = {
       },
       {
         "voldikss/vim-browser-search",
+      },
+      {
+        "ahmedkhalf/project.nvim",
+        config = function()
+          require("project_nvim").setup {
+            require("telescope").load_extension "projects",
+          }
+        end,
       },
 
       -- We also support a key value style plugin definition similar to NvChad:
