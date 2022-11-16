@@ -32,6 +32,11 @@ return {
     -- better increment/decrement
     ["-"] = { "<c-x>", desc = "Descrement number" },
     ["+"] = { "<c-a>", desc = "Increment number" },
+    ["<M-2>"] = { function() vim.lsp.buf.code_action() end, desc = "LSP code action" },
+    ["<M-l>"] = {
+      function() vim.lsp.buf.format(astronvim.lsp.format_opts) end,
+      desc = "Format code",
+    },
     -- Treesitter Surfer
     -- ["<c-down>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
     -- ["<c-right>"] = { "<cmd>STSSwapDownNormal<cr>", desc = "Swap next tree-sitter object" },
