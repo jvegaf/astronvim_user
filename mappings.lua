@@ -26,9 +26,6 @@ return {
     -- ["<Down>"] = { function() require("smart-splits").resize_down(2) end, desc = "Resize split down" },
     -- ["<Left>"] = { function() require("smart-splits").resize_left(2) end, desc = "Resize split left" },
     -- ["<Right>"] = { function() require("smart-splits").resize_right(2) end, desc = "Resize split right" },
-    -- navigating wrapped lines
-    j = { "gj", desc = "Navigate down" },
-    k = { "gk", desc = "Navigate down" },
     -- easy splits
     -- ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
@@ -62,10 +59,10 @@ return {
     ["<c-CR>"] = { "<++>", desc = "Insert template string" },
     ["<S-Tab>"] = { "<C-V><Tab>", desc = "Tab character" },
     -- move lines
-    ["<A-j>"] = { "<Esc><cmd> :m .+1<CR>==gi", desc = "move line down" },
-    ["<A-k>"] = { "<Esc><cmd> :m .-2<CR>==gi", desc = "move line up" },
-    ["<A-Down>"] = { "<Esc><cmd> :m .+1<CR>==gi", desc = "move line down" },
-    ["<A-Up>"] = { "<Esc><cmd> :m .-2<CR>==gi", desc = "move line up" },
+    ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "move line down" },
+    ["<A-k>"] = { "<Esc>:m .-2<CR>==gi", desc = "move line up" },
+    ["<A-Down>"] = { "<Esc>:m .+1<CR>==gi", desc = "move line down" },
+    ["<A-Up>"] = { "<Esc>:m .-2<CR>==gi", desc = "move line up" },
   },
   v = {
     -- navigating wrapped lines
