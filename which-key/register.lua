@@ -1,18 +1,18 @@
-local utils = require("user.utils")
+local utils = require "user.utils"
 
 return {
   n = {
+    ["Q"] = { function() MiniBufremove.delete() end, "Bye Buffer" },
     ["<leader>"] = {
       ["c"] = { function() MiniBufremove.delete() end, "Bye Buffer" },
       ["C"] = { "<cmd>bdelete<cr>", "Close Buffer" },
       ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
       ["H"] = { "<cmd>set hlsearch!<cr>", "Toggle Highlight" },
       ["<cr>"] = { '<esc>/<++><cr>"_c4l', "Next Template" },
-      ["z"] = { "<cmd>ZenMode<cr>", "Zen Mode" },
+      ["o"] = { "<cmd>AerialToggle<cr>", "Toggle Outline Symbols" },
       ["r"] = { "<cmd>SendHere<cr>", "Set REPL" },
       ["."] = { "<cmd>cd %:p:h<cr>", "Set CWD" },
-      ["n"] = { "<cmd>ASToggle<cr>", "Toggle AutoSave" },
-      a = {
+      A = {
         name = "Annotate",
         ["<cr>"] = { function() require("neogen").generate() end, "Current" },
         c = { function() require("neogen").generate { type = "class" } end, "Class" },
