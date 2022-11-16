@@ -1,4 +1,4 @@
-local utils = require "user.utils"
+local utils = require("user.utils")
 
 return {
   n = {
@@ -178,7 +178,7 @@ return {
     },
   },
   v = {
-    ["<leader>"] = {
+    [""] = {
       h = {
         name = "Hop",
         c = { "<cmd>HopChar1<cr>", "Character" },

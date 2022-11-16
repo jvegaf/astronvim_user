@@ -3,7 +3,6 @@ return {
     -- disable default bindings
     ["<C-q>"] = false,
     ["<C-s>"] = false,
-    ["<leader>c"] = false,
     ["<leader>h"] = false,
     ["<leader>fh"] = false,
     ["<leader>fm"] = false,
@@ -50,10 +49,13 @@ return {
     ["Cl"] = { "<cmd>GitConflictListQf<cr>", desc = "List Conflicts" },
     ["]C"] = { "<Plug>(git-conflict-next-conflict)", desc = "Next conflict" },
     ["[C"] = { "<Plug>(git-conflict-prev-conflict)", desc = "Previous conflict" },
-    ["<A-j>"] = { "<cmd> :m .+1<CR>==", desc = "move line down" },
-    ["<A-k>"] = { "<cmd> :m .-2<CR>==", desc = "move line up" },
-    ["<A-Down>"] = { "<cmd> :m .+1<CR>==", desc = "move line down" },
-    ["<A-Up>"] = { "<cmd> :m .-2<CR>==", desc = "move line up" },
+    ["<A-j>"] = { ":m .+1<CR>==", desc = "move line down" },
+    ["<A-k>"] = { ":m .-2<CR>==", desc = "move line up" },
+    ["<A-Down>"] = { ":m .+1<CR>==", desc = "move line down" },
+    ["<A-Up>"] = { ":m .-2<CR>==", desc = "move line up" },
+    ["<A-1>"] = { "<cmd>NvimTreeToggle<cr>", desc = "Toggle Explorer" },
+    ["<Leader>e"] = { "<cmd>NvimTreeFocus<cr>", desc = "Focus Explorer" },
+    ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab" },
   },
   i = {
     -- type template string
@@ -70,7 +72,7 @@ return {
     j = { "gj", desc = "Navigate down" },
     k = { "gk", desc = "Navigate down" },
     -- Google Search
-    s = { ":'<,'>BrowserSearch<cr>", desc = "Browser Search" },
+    ["s"] = { ":'<,'>BrowserSearch<cr>", desc = "Browser Search" },
     -- move lines
     ["<A-j>"] = { "<cmd> :m '>+1<CR>gv=gv", desc = "move line down" },
     ["<A-k>"] = { "<cmd> :m '<-2<CR>gv=gv", desc = "move line up" },

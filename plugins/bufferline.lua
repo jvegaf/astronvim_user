@@ -1,1 +1,1 @@
-return { options = { show_buffer_close_icons = false, show_close_icon = false } }
+return { options = { show_buffer_close_icons = true, show_close_icon = true } }
