@@ -41,4 +41,5 @@ return {
   ["rainbowhxch/accelerated-jk.nvim"] = require "user.plugins.accelerated-jk",
   ["mg979/vim-visual-multi"] = require "user.plugins.vim-visual-multi",
   ["kevinhwang91/nvim-ufo"] = require "user.plugins.nvim-ufo",
+  ["lvimuser/lsp-inlayhints.nvim"] = require "user.plugins.lsp-inlayhints",
 }
