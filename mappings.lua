@@ -4,6 +4,7 @@ return {
     ["<C-q>"] = false,
     ["<C-s>"] = false,
     ["<leader>h"] = false,
+    ["<leader>c"] = false,
     ["<leader>fh"] = false,
     ["<leader>fm"] = false,
     ["<leader>fn"] = false,

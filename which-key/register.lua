@@ -4,7 +4,6 @@ return {
   n = {
     ["Q"] = { function() MiniBufremove.delete() end, "Bye Buffer" },
     ["<leader>"] = {
-      ["c"] = { function() MiniBufremove.delete() end, "Bye Buffer" },
       ["C"] = { "<cmd>bdelete<cr>", "Close Buffer" },
       ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
       ["H"] = { "<cmd>set hlsearch!<cr>", "Toggle Highlight" },
@@ -12,6 +11,7 @@ return {
       ["o"] = { "<cmd>AerialToggle<cr>", "Toggle Outline Symbols" },
       ["r"] = { "<cmd>SendHere<cr>", "Set REPL" },
       ["."] = { "<cmd>cd %:p:h<cr>", "Set CWD" },
+      ["w"] = { "<cmd>Telescope colorscheme<cr>", "Themes" },
       A = {
         name = "Annotate",
         ["<cr>"] = { function() require("neogen").generate() end, "Current" },
@@ -77,12 +77,6 @@ return {
         t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
         l = { "<cmd>Trouble loclist<cr>", "LocationList" },
         w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
-      },
-
-      w = {
-        name = "Theme",
-        d = { ":colorscheme nightfox<cr>", "Dark" },
-        l = { ":colorscheme dayfox<cr>", "Light" },
       },
 
       x = {
