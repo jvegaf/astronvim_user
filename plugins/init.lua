@@ -12,6 +12,7 @@ return {
   ["hrsh7th/cmp-omni"] = require "user.plugins.cmp-omni",
   ["hrsh7th/cmp-cmdline"] = {},
   ["hrsh7th/cmp-path"] = {},
+  ["goolord/alpha-nvim"] = require "user.plugins.alpha",
   ["mehalter/mason-nvim-dap.nvim"] = require "user.plugins.mason-nvim-dap",
   ["jc-doyle/cmp-pandoc-references"] = require "user.plugins.cmp-pandoc-references",
   ["jose-elias-alvarez/typescript.nvim"] = require "user.plugins.typescript",
