@@ -1,6 +1,8 @@
 return {
   -- You can disable default plugins as follows:
-  ["goolord/alpha-nvim"] = { disable = true },
+  ["goolord/alpha-nvim"] = {
+    config = function() require "user.plugins.alpha" end,
+  },
   ["nvim-neo-tree/neo-tree.nvim"] = { disable = true }, -- You can also add new plugins here as well:
   ["max397574/better-escape.nvim"] = { disable = true },
   -- You can also add new plugins here as well:

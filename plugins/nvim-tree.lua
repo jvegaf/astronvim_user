@@ -77,13 +77,12 @@ nvimtree.setup {
           symlink_open = "",
         },
         git = {
-    unstaged = "✗",
-    staged = "✓",
-    unmerged = "",
-    renamed = "➜",
-    untracked = "★"
-  },
-
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+        },
       },
     },
   },
@@ -128,5 +127,5 @@ nvimtree.setup {
       profile = false,
       watcher = false,
     },
-  },  
+  },
 }
