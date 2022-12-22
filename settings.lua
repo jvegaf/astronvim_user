@@ -1,3 +1,5 @@
+print("in settings")
+
 local has = function(x)
   return vim.fn.has(x) == 1
 end

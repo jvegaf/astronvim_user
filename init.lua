@@ -8,7 +8,6 @@ return {
       luasnip = 1000,
       nvim_lua = 800,
       nvim_lsp = 700,
-      crates = 600,
       path = 500,
       buffer = 250,
     },
@@ -16,7 +15,7 @@ return {
 
   polish = function()
     require "user.autocmds"
-    require "user.mappings"
     require "user.settings"
+    require "user.mappings"
   end,
 }

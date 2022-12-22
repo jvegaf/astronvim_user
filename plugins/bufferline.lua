@@ -8,10 +8,10 @@ return {
         padding = 1,
       },
     },
-    show_buffer_close_icons = false,
+    show_buffer_close_icons = true,
     show_close_icon = false,
   },
   highlights = {
-    duplicate = { guibg = "#2C323C" },
+    duplicate = { bg = "#2C323C" },
   },
 }

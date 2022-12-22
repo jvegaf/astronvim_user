@@ -5,6 +5,12 @@ return {
   ["lukas-reineke/indent-blankline.nvim"] = { disable = true },
   ["numToStr/Comment.nvim"] = { disable = true },
 
+  ["williamboman/nvim-lsp-installer"] = {
+    config = function()
+      require"user.plugins.nvim-lsp-installer"
+    end
+  },
+
   -- Colorscheme/theme
   ["EdenEast/nightfox.nvim"] = {
     config = function()
@@ -77,7 +83,7 @@ return {
   -- Extensions for telescope.nvim
   ["nvim-telescope/telescope-file-browser.nvim"] = {
     after = "telescope.nvim",
-    module = "telescope._extensions.file_browser",
+    module = "telescope.extensions.file_browser",
     config = function()
       require("telescope").load_extension "file_browser"
     end,
@@ -96,14 +102,14 @@ return {
   },
   ["nvim-telescope/telescope-project.nvim"] = {
     after = "telescope.nvim",
-    module = "telescope._extensions.project",
+    module = "telescope.extensions.project",
     config = function()
-      require("telescope").load_extension "project"
+    require'telescope'.load_extension('project')
     end,
   },
   ["benfowler/telescope-luasnip.nvim"] = {
     after = "telescope.nvim",
-    module = "telescope._extensions.luasnip",
+    module = "telescope.extensions.luasnip",
     config = function()
       require("telescope").load_extension "luasnip"
     end,
