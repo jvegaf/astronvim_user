@@ -17,5 +17,6 @@ return {
   polish = function()
     require "user.autocmds"
     require "user.mappings"
+    require "user.settings"
   end,
 }

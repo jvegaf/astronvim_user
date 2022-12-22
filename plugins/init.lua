@@ -58,15 +58,6 @@ return {
     end,
   },
 
-  -- Distraction-free coding
-  ["folke/zen-mode.nvim"] = {
-    cmd = "ZenMode",
-    module = "zen-mode",
-    config = function()
-      require("zen-mode").setup(require "user.plugins.zen-mode")
-    end,
-  },
-
   -- nvim-cmp source for emoji
   ["hrsh7th/cmp-emoji"] = {
     after = "nvim-cmp",
@@ -80,14 +71,6 @@ return {
     ft = { "markdown", "rmd" },
     config = function()
       require("headlines").setup(require "user.plugins.headlines")
-    end,
-  },
-
-  -- Plain text note-taking assistant
-  ["mickael-menu/zk-nvim"] = {
-    module = { "zk", "zk.commands" },
-    config = function()
-      require("zk").setup(require "user.plugins.zk")
     end,
   },
 
@@ -137,69 +120,6 @@ return {
     end,
   },
 
-  -- Programming, Testing, Debugging
-  ["mfussenegger/nvim-dap"] = {
-    module = "dap",
-    config = require "user.plugins.dap",
-    requires = {
-      {
-        "rcarriga/nvim-dap-ui",
-        after = "nvim-dap",
-        config = require "user.plugins.dapui",
-      },
-      {
-        "theHamsta/nvim-dap-virtual-text",
-        after = "nvim-dap",
-        config = function()
-          require("nvim-dap-virtual-text").setup(require "user.plugins.dap-virtual-text")
-        end,
-      },
-      {
-        "nvim-telescope/telescope-dap.nvim",
-        after = "telescope.nvim",
-        module = "telescope._extensions.dap",
-        config = function()
-          require("telescope").load_extension "dap"
-        end,
-      },
-    },
-  },
-  -- Debug Adapter for Lua
-  ["jbyuki/one-small-step-for-vimkind"] = {
-    requires = { "nvim-dap" },
-    module = "osv",
-  },
-  -- Rust programming
-  ["simrat39/rust-tools.nvim"] = {
-    after = { "nvim-lsp-installer" },
-    ft = { "rust" },
-    config = function()
-      require("rust-tools").setup(require "user.plugins.rust-tools")
-    end,
-  },
-  ["Saecki/crates.nvim"] = {
-    event = { "BufRead Cargo.toml" },
-    requires = { "plenary.nvim" },
-    config = function()
-      require("crates").setup(require "user.plugins.crates")
-      astronvim.add_user_cmp_source "crates"
-    end,
-  },
-  -- Flutter programming
-  ["akinsho/flutter-tools.nvim"] = {
-    after = { "nvim-lsp-installer" },
-    requires = { "nvim-dap", "plenary.nvim" },
-    config = function()
-      require("flutter-tools").setup(require "user.plugins.flutter-tools")
-    end,
-  },
-  -- Go programming
-  ["ray-x/go.nvim"] = {
-    ft = "go",
-    config = function()
-      require("go").setup(require "user.plugins.go")
-    end,
-  },
   -- Testing (Rails, Go)
   ["klen/nvim-test"] = {
     cmd = {
@@ -214,9 +134,6 @@ return {
       require("nvim-test").setup(require "user.plugins.nvim-test")
     end,
   },
-  -- sqls language server
-  ["nanotee/sqls.nvim"] = { module = "sqls" },
-
   -- Better quickfix window
   ["kevinhwang91/nvim-bqf"] = {
     ft = "qf",

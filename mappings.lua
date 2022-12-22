@@ -103,14 +103,6 @@ map("n", "<c-left>", function()
   require("syntax-tree-surfer").move("n", true)
 end, { desc = "Swap previous tree-sitter object" })
 
--- dapui
-map("n", "duc", function()
-  require("dapui").close()
-end, { desc = "Dap UI: Close" })
-map("n", "dut", function()
-  require("dapui").toggle()
-end, { desc = "Dap UI: Toggle" })
-
 -- telescope-projects
 map("n", "<c-p>", function()
   require("telescope").extensions.project.project {}
