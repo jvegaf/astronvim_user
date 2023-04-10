@@ -8,7 +8,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-  { import = "astrocommunity.editing-support.mini-splitjoin" },
+  { import = "astrocommunity.editing-support.treej" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
