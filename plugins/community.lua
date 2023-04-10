@@ -13,7 +13,6 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
@@ -25,6 +24,7 @@ return {
   { import = "astrocommunity.color.ccc-nvim" },
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.tailwindcss" },
 }
