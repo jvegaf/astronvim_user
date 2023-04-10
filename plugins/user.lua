@@ -43,6 +43,14 @@ return {
       vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
     end,
   },
+  -- LSP
+  {
+    "weilbith/nvim-code-action-menu",
+    cmd = "CodeActionMenu",
+    keys = {
+      { "<leader>ca", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
+    },
+  },
   -- Git
   {
     "kdheepak/lazygit.nvim",
@@ -55,5 +63,10 @@ return {
     "jackMort/ChatGPT.nvim",
     config = function() require("chatgpt").setup() end,
     cmd = { "ChatGPT", "ChatGPTEditWithInstructions" },
+  },
+  -- Theme
+  {
+    "RRethy/nvim-base16",
+    lazy = false,
   },
 }
