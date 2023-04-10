@@ -29,8 +29,14 @@ return {
     ["vv"] = { "V", desc = "Visual Line Mode" },
     ["<Esc><Esc>"] = { "V", desc = "Cancel search highlighting" },
     ["<C-a>"] = { "gg<S-v>G", desc = "Select All" },
+    ["<A-1>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
+    ["<A-2>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
+    ["<A-3>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" },
   },
   t = {
+    ["<A-1>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<A-2>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<A-3>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
