@@ -17,7 +17,7 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "base16-monokai",
+  colorscheme = "base16-ayu-dark",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
