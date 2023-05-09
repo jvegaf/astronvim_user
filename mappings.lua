@@ -9,7 +9,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>c"] = false,
-    ["<S-q>"] = { "<cmd>Bdelete<cr>", desc = "Close Buffer" },
+    ["<A-q>"] = { "<cmd>Bdelete<cr>", desc = "Close Buffer" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
