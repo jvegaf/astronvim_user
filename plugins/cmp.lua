@@ -4,13 +4,6 @@ return {
   event = "User AstroFile",
   dependencies = {
     "hrsh7th/cmp-emoji", -- add cmp source as dependency of cmp
-    {
-      "jcdickinson/codeium.nvim",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-      },
-      config = function() require("codeium").setup {} end,
-    },
     { "tzachar/cmp-tabnine", build = "./install.sh" },
   },
   -- override the options table that is used in the `require("cmp").setup()` call
@@ -20,13 +13,12 @@ return {
     local cmp = require "cmp"
     -- modify the sources part of the options table
     opts.sources = cmp.config.sources {
-      { name = "nvim_lsp", priority = 1000 },
-      { name = "codeium", priority = 900 },
-      { name = "luasnip", priority = 850 },
-      { name = "buffer", priority = 500 },
-      { name = "path", priority = 250 },
+      { name = "nvim_lsp",    priority = 1000 },
+      { name = "luasnip",     priority = 850 },
+      { name = "buffer",      priority = 500 },
+      { name = "path",        priority = 250 },
       { name = "cmp_tabnine", priority = 800 },
-      { name = "emoji", priority = 600 }, -- add new source
+      { name = "emoji",       priority = 600 }, -- add new source
     }
 
     -- opts.experimental = cmp.config.experimental {
