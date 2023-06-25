@@ -5,10 +5,10 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-  { import = "astrocommunity.editing-support.treej" },
+  { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
@@ -26,5 +26,4 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.tailwindcss" },
 }

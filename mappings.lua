@@ -24,9 +24,12 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
-    ["<S-Tab>"] = { "<cmd>bprevious<cr>", desc = "Previous Buffer" },
+    ["<Tab>"] = {
+      "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
+      desc = "Buffers list",
+    },
     ["vv"] = { "V", desc = "Visual Line Mode" },
+    ["zz"] = { "<cmd>wq<cr>", desc = "Write and Quit" },
     ["<Esc><Esc>"] = { "V", desc = "Cancel search highlighting" },
     ["<C-a>"] = { "gg<S-v>G", desc = "Select All" },
     ["<A-1>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
@@ -43,6 +46,9 @@ return {
   v = {
     ["<"] = { "<gv", desc = "Stay in indent mode" },
     [">"] = { ">gv", desc = "Stay in indent mode" },
+    ["p"] = { '"_dP', desc = "Dont yank in visual paste" },
+  },
+  x = {
     ["p"] = { '"_dP', desc = "Dont yank in visual paste" },
   },
 }
