@@ -30,8 +30,44 @@ return {
   -- NPM
   {
     "vuki656/package-info.nvim",
+    dependencies = "MunifTanjim/nui.nvim",
     event = "BufEnter package.json",
-    config = function() require "plugins.package-info" end,
+    config = function()
+      require("package-info").setup()
+      vim.keymap.set(
+        "n",
+        "<leader>ns",
+        "<cmd>lua require('package-info').show()<cr>",
+        { silent = true, noremap = true }
+      )
+      vim.keymap.set(
+        "n",
+        "<leader>nd",
+        "<cmd>lua require('package-info').delete()<cr>",
+        { silent = true, noremap = true }
+      )
+      vim.keymap.set(
+        "n",
+        "<leader>ni",
+        "<cmd>lua require('package-info').install()<cr>",
+        { silent = true, noremap = true }
+      )
+
+      vim.keymap.set({ "n" }, "<leader>nu", require("package-info").update, { silent = true, noremap = true })
+
+      require("telescope").setup {
+        extensions = {
+          package_info = {
+            -- Optional theme (the extension doesn't set a default theme)
+            theme = "ivy",
+          },
+        },
+      }
+
+      require("telescope").load_extension "package_info"
+
+      vim.keymap.set({ "n" }, "<leader>Tp", "<cmd>Telescope package_info<cr>", { silent = true, noremap = true, description = "Package Info" })
+    end,
   },
   -- General
   {
@@ -61,7 +97,7 @@ return {
     "weilbith/nvim-code-action-menu",
     cmd = "CodeActionMenu",
     keys = {
-      { "<leader>ca", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
+      { "<leader>xc", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
     },
   },
   -- Git

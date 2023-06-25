@@ -19,9 +19,12 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<leader>lf"] = { "<cmd>vim.lsp.buf.format()<cr>", desc = "Format Buffer" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>x"] = { name = "Diagnostics" },
+    ["<leader>T"] = { name = "Telescope" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<Tab>"] = {
