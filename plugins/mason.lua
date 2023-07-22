@@ -25,7 +25,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       automatic_installation = true,
-      ensure_installed = { "prettierd", "stylua" },
+      ensure_installed = { "prettierd", "stylua", "jq" },
     },
   },
   -- {
