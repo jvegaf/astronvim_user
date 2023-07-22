@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.project.projectmgr-nvim" },
+  { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- { import = "astrocommunity.color.ccc-nvim" },
