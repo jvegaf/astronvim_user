@@ -9,7 +9,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>c"] = false,
-    ["<A-q>"] = { "<cmd>Bdelete<cr>", desc = "Close Buffer" },
+    ["<A-q>"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -24,6 +24,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>x"] = { name = "Diagnostics" },
+    ["<leader>xc"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Actions" },
     ["<leader>T"] = { name = "Telescope" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command

@@ -2,6 +2,17 @@ return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   {
+    "ray-x/aurora",
+    lazy = false,
+    config = function()
+      vim.g.aurora_italic = true
+      vim.g.aurora_transparent = true
+      vim.g.aurora_bold = true
+      vim.g.aurora_darker = true
+      vim.cmd [[ colorscheme aurora ]]
+    end,
+  },
+  {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
@@ -23,10 +34,10 @@ return {
     },
   },
   -- platformio
-  {
-    "normen/vim-pio",
-    event = "BufEnter platformio.ini",
-  },
+  -- {
+  --   "normen/vim-pio",
+  --   event = "BufEnter platformio.ini",
+  -- },
   -- NPM
   {
     "vuki656/package-info.nvim",
@@ -93,13 +104,13 @@ return {
     config = function() vim.g.VM_leader = ";" end,
   },
   -- LSP
-  {
-    "weilbith/nvim-code-action-menu",
-    cmd = "CodeActionMenu",
-    keys = {
-      { "<leader>xc", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
-    },
-  },
+  -- {
+  --   "weilbith/nvim-code-action-menu",
+  --   cmd = "CodeActionMenu",
+  --   keys = {
+  --     { "<leader>xc", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
+  --   },
+  -- },
   -- Git
   {
     "kdheepak/lazygit.nvim",
@@ -108,14 +119,14 @@ return {
     config = function() vim.g.lazygit_floating_window_scaling_factor = 1 end,
   },
   -- IA
-  {
-    "jackMort/ChatGPT.nvim",
-    config = function() require("chatgpt").setup() end,
-    cmd = { "ChatGPT", "ChatGPTEditWithInstructions" },
-  },
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   config = function() require("chatgpt").setup() end,
+  --   cmd = { "ChatGPT", "ChatGPTEditWithInstructions" },
+  -- },
   -- Theme
-  {
-    "RRethy/nvim-base16",
-    lazy = false,
-  },
+  -- {
+  --   "RRethy/nvim-base16",
+  --   lazy = false,
+  -- },
 }

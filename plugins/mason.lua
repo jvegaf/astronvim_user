@@ -6,7 +6,17 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       automatic_installation = true,
-      ensure_installed = { "lua_ls" },
+      ensure_installed = {
+        "bashls",
+        "cssls",
+        "graphql",
+        "html",
+        "jsonls",
+        "lua_ls",
+        "tsserver",
+        "emmet_ls",
+        "yamlls",
+      },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -15,7 +25,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       automatic_installation = true,
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettierd", "stylua" },
     },
   },
   -- {
