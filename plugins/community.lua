@@ -24,7 +24,7 @@ return {
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
-  -- { import = "astrocommunity.color.ccc-nvim" },
+  { import = "astrocommunity.register.nvim-neoclip-lua" },
   -- { import = "astrocommunity.color.twilight-nvim" },
   -- { import = "astrocommunity.pack.lua" },
 }
