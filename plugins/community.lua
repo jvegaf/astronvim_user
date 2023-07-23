@@ -26,5 +26,8 @@ return {
   { import = "astrocommunity.syntax.hlargs-nvim" },
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.utility.neodim" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.git.neogit" },
   -- { import = "astrocommunity.pack.lua" },
 }
