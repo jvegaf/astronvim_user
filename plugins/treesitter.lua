@@ -9,6 +9,9 @@ return {
       "vim",
       "yaml",
       "css",
+      "json",
+      "html",
+      "http"
     },
     auto_install = true,
   },
