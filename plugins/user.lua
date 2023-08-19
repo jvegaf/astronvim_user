@@ -9,7 +9,7 @@ return {
       vim.g.aurora_transparent = true
       vim.g.aurora_bold = true
       vim.g.aurora_darker = true
-      vim.cmd [[ colorscheme aurora ]]
+     -- vim.cmd [[ colorscheme aurora ]]
     end,
   },
   {

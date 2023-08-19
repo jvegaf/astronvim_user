@@ -26,6 +26,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>x"] = { name = "Diagnostics" },
     ["<leader>xc"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Actions" },
+    ["<leader>t"] = { name = "Test" },
     ["<leader>T"] = { name = "Telescope" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
