@@ -10,9 +10,9 @@ return {
       },
       status = { virtual_text = true },
       output = { open_on_run = true },
-      quickfix = {
-        open = vim.cmd "Trouble quickfix",
-      },
+      -- quickfix = {
+      --   open = vim.cmd "Trouble quickfix",
+      -- },
     },
     keys = {
       { "<leader>tt", function() require("neotest").run.run(vim.fn.expand "%") end, desc = "Run File" },
