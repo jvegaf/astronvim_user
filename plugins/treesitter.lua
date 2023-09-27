@@ -5,6 +5,8 @@ return {
       "lua",
       "typescript",
       "javascript",
+      "java",
+      "xml",
       "tsx",
       "vim",
       "yaml",

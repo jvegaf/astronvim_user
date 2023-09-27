@@ -19,7 +19,7 @@ return {
       end,
       desc = "Pick to close",
     },
-    ["<leader>lf"] = { "<cmd>vim.lsp.buf.format()<cr>", desc = "Format Buffer" },
+    ["gq"] = { "<cmd>vim.lsp.buf.format()<cr>", desc = "Format Buffer" },
     ["<leader>P"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
@@ -28,6 +28,10 @@ return {
     ["<leader>xc"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Actions" },
     ["<leader>t"] = { name = "Test" },
     ["<leader>T"] = { name = "Telescope" },
+    ["<leader>z"] = { name = "System" },
+    ["<leader>zc"] = { "<cmd>e $MYVIMRC<cr>", desc = "Config" },
+    ["<leader>zh"] = { "<cmd>checkhealth<cr>", desc = "Health" },
+    ["<leader>zn"] = { "<cmd>Telescope notify<cr>", desc = "Notifications" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<Tab>"] = {
