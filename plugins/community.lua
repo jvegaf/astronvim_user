@@ -23,6 +23,7 @@ return {
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.project.project-nvim" },
