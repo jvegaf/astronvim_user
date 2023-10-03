@@ -20,6 +20,7 @@ return {
       desc = "Pick to close",
     },
     ["gq"] = { "<cmd>vim.lsp.buf.format()<cr>", desc = "Format Buffer" },
+    ["U"] = { "<cmd>Telescope undo<cr>", desc = "Undo Tree" },
     ["<leader>P"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
@@ -40,7 +41,7 @@ return {
     },
     ["vv"] = { "V", desc = "Visual Line Mode" },
     ["zz"] = { "<cmd>wq<cr>", desc = "Write and Quit" },
-    ["<Esc><Esc>"] = { "V", desc = "Cancel search highlighting" },
+    ["<Esc><Esc>"] = { ":nohlsearch<Bar>:echo<CR>", desc = "Cancel search highlighting" },
     ["<C-a>"] = { "gg<S-v>G", desc = "Select All" },
     ["<A-1>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
     ["<A-2>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },

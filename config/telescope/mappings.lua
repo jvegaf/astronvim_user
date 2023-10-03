@@ -49,7 +49,6 @@ map_tele("<leader>bv", "file_browser", { desc = "Project directory" })
 map_tele("<leader><space>", "git_files", { desc = "Find Git Files" })
 map_tele("<leader>gs", "git_status", { desc = "Git status" })
 map_tele("<leader>gz", "git_diffs diff_commits", { desc = "Git Diff Commits" })
-map_tele("<leader>u", "undo", { desc = "Undo View" })
 map_tele("<leader>xx", "diagnostics", { desc = "Diagnostic of the buffer" })
 
 return map_tele
