@@ -4,13 +4,13 @@ local reloader = function()
   if SHOULD_RELOAD_TELESCOPE then
     Reload "plenary"
     Reload "telescope"
-    Reload "config.telescope.setup"
+    Reload "user.config.telescope.setup"
   end
 end
 
 local fb_actions = require("telescope").extensions.file_browser.actions
 local actions = require "telescope.actions"
-local my_actions = require "config.telescope.my_actions"
+local my_actions = require "user.config.telescope.my_actions"
 
 local M = {}
 

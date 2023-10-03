@@ -34,6 +34,14 @@ return {
   --   end,
   -- },
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    config = function(plugin, opts)
+      require "plugins.configs.neo-tree"(plugin, opts)
+      local neo_tree = require "neo-tree"
+      neo_tree.follow_current_file.enabled=true
+    end
+  },
+  {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
       require "plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
