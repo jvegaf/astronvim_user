@@ -10,6 +10,7 @@ return {
     -- mappings seen under group name "Buffer"
     ["<leader>c"] = false,
     ["<A-q>"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
+    ["<A-w>"] = { "<cmd>w<cr>", desc = "Write" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -19,7 +20,17 @@ return {
       end,
       desc = "Pick to close",
     },
-    ["gq"] = { "<cmd>vim.lsp.buf.format()<cr>", desc = "Format Buffer" },
+    ["gq"] = {
+      function()
+        return vim.lsp.buf.format {
+          async = false,
+          timeout_ms = 10000,
+          filter = function(cli) return cli.name ~= "lua_ls" end,
+        }
+      end,
+      buffer = 0,
+      desc = "Format Buffer",
+    },
     ["U"] = { "<cmd>Telescope undo<cr>", desc = "Undo Tree" },
     ["<leader>P"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
     -- tables with the `name` key will be registered with which-key if it's installed

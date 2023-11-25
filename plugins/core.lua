@@ -35,10 +35,21 @@ return {
   -- },
   {
     "nvim-neo-tree/neo-tree.nvim",
-    config = function(plugin, opts)
-      require "plugins.configs.neo-tree"(plugin, opts)
-      local neo_tree = require "neo-tree"
-      neo_tree.follow_current_file.enabled=true
+    config = function(_, opts)
+      require("neo-tree").setup({
+        close_if_last_window = true,
+        filesystem = {
+          follow_current_file = true,
+        },
+        event_handlers = {
+          {
+            event = "file_opened",
+            handler = function(file_path)
+              require("neo-tree.command").execute({ action = "close" })
+            end
+          },
+        }
+      })
     end
   },
   {

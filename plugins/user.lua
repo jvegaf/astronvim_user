@@ -17,12 +17,6 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-  -- browse
-  {
-    "voldikss/vim-browser-search",
-    -- lazy = false,
-    keys = { { "<A-s>", ":'<,'>BrowserSearch<cr>", mode = "v", desc = "Search on web" } },
-  },
   -- cheat
   {
     "RishabhRD/nvim-cheat.sh",

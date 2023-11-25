@@ -26,18 +26,43 @@ return {
     "echasnovski/mini.surround",
     opts = {
       mappings = {
-        add =  "gsa", -- Add surrounding in Normal and Visual modes
-        delete =  "gsd", -- Delete surrounding
-        find =  "gsf", -- Find surrounding (to the right)
-        find_left =  "gsF", -- Find surrounding (to the left)
-        highlight =  "gsh", -- Highlight surrounding
-        replace =  "gsr", -- Replace surrounding
-        update_n_lines =  "gsn", -- Update `n_lines`
+        add = "gsa", -- Add surrounding in Normal and Visual modes
+        delete = "gsd", -- Delete surrounding
+        find = "gsf", -- Find surrounding (to the right)
+        find_left = "gsF", -- Find surrounding (to the left)
+        highlight = "gsh", -- Highlight surrounding
+        replace = "gsr", -- Replace surrounding
+        update_n_lines = "gsn", -- Update `n_lines`
       },
     },
   },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.java" },
+  {
+    "mfussenegger/nvim-jdtls",
+    opts = {
+      settings = {
+        java = {
+          configuration = {
+            runtimes = {
+              {
+                name = "JavaSE-11",
+                path = "/home/jvegaf/.sdkman/candidates/java/11.0.19-tem",
+              },
+              {
+                name = "JavaSE-17",
+                path = "/home/jvegaf/.sdkman/candidates/java/17.0.8.fx-zulu",
+              },
+              {
+                name = "JavaSE-21",
+                path = "/home/jvegaf/.sdkman/candidates/java/21-tem",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
   { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.project.project-nvim" },
