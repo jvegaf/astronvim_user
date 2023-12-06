@@ -36,7 +36,7 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     config = function(_, opts)
-      require("neo-tree").setup({
+      require("neo-tree").setup {
         close_if_last_window = true,
         filesystem = {
           follow_current_file = true,
@@ -44,13 +44,38 @@ return {
         event_handlers = {
           {
             event = "file_opened",
-            handler = function(file_path)
-              require("neo-tree.command").execute({ action = "close" })
-            end
+            handler = function(file_path) require("neo-tree.command").execute { action = "close" } end,
           },
-        }
-      })
-    end
+        },
+        window = {
+          ignore_focused = true,
+          auto_ignore_identical_files = true,
+          follow = true,
+          focus_follow = true,
+          highlight_opened_files = true,
+          mappings = {
+            ["h"] = function(state)
+              local node = state.tree:get_node()
+              if node.type == "directory" and node:is_expanded() then
+                require("neo-tree.sources.filesystem").toggle_directory(state, node)
+              else
+                require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+              end
+            end,
+            ["l"] = function(state)
+              local node = state.tree:get_node()
+              if node.type == "directory" then
+                if not node:is_expanded() then
+                  require("neo-tree.sources.filesystem").toggle_directory(state, node)
+                elseif node:has_children() then
+                  require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
+                end
+              end
+            end,
+          },
+        },
+      }
+    end,
   },
   {
     "windwp/nvim-autopairs",

@@ -33,7 +33,7 @@ return {
   },
   event = "VeryLazy",
   config = function()
-    require("user.config.telescope.setup")
-    require("user.config.telescope.mappings")
+    require "user.config.telescope.setup"
+    require "user.config.telescope.mappings"
   end,
 }

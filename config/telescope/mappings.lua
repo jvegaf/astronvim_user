@@ -9,7 +9,7 @@ local map_tele = function(key, f, opts)
   opts = vim.tbl_deep_extend("force", default, opts or {})
 
   local rhs = function()
-    R("config.telescope")[f](opts.options)
+    R("user.config.telescope")[f](opts.options)
   end
 
   local map_options = {
