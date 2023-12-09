@@ -9,6 +9,7 @@ return {
     wrap = false, -- sets vim.opt.wrap
     smartcase = true,
     ignorecase = true,
+    clipboard = "unnamedplus",
   },
   g = {
     mapleader = ",", -- sets vim.g.mapleader

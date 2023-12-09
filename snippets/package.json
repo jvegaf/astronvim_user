@@ -1,0 +1,88 @@
+{
+  "name": "user_snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "cpp"
+        ],
+        "path": "./cpp.json"
+      },
+      {
+        "language": [
+          "java"
+        ],
+        "path": "./java.json"
+      },
+      {
+        "language": [
+          "typescriptreact"
+        ],
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "typescript"
+        ],
+        "path": "./typescript.json"
+      },
+      {
+        "language": [
+          "javascript"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./jsonc.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": "jade",
+        "path": "./vue-pug.json"
+      },
+      {
+        "language": "html",
+        "path": "./vue-template.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./vue-template.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-script.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-script-router.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-script.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-script-router.json"
+      },
+      {
+        "language": "dart",
+        "path": "./dart.json"
+      }
+    ]
+  }
+}

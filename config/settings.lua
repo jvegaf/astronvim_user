@@ -1,7 +1,7 @@
 local host = vim.loop.os_uname().sysname
 
 if host == "Linux" then
-  require "user.config.linux"
+  -- require "user.config.linux"
   return
 end
 

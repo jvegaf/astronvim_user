@@ -31,6 +31,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.dart" },
   -- {
   --   "mfussenegger/nvim-jdtls",
   --   opts = {

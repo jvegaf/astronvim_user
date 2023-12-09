@@ -8,17 +8,6 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["gq"] = {
-      function()
-        return vim.lsp.buf.format {
-          async = false,
-          timeout_ms = 10000,
-          filter = function(cli) return cli.name ~= "lua_ls" end,
-        }
-      end,
-      buffer = 0,
-      desc = "Format Buffer",
-    },
     ["<leader>c"] = false,
     ["<A-q>"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
     ["<A-w>"] = { "<cmd>w<cr>", desc = "Write" },
