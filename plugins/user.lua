@@ -88,14 +88,6 @@ return {
     },
     config = function() vim.g.VM_leader = ";" end,
   },
-  -- LSP
-  -- {
-  --   "weilbith/nvim-code-action-menu",
-  --   cmd = "CodeActionMenu",
-  --   keys = {
-  --     { "<leader>xc", "<cmd>CodeActionMenu<cr>", desc = "Code Actions" },
-  --   },
-  -- },
   -- Git
   {
     "kdheepak/lazygit.nvim",
@@ -103,15 +95,4 @@ return {
     cmd = { "LazyGit", "LazyGitCurrentFile", "LazyGitFilterCurrentFile", "LazyGitFilter" },
     config = function() vim.g.lazygit_floating_window_scaling_factor = 1 end,
   },
-  -- IA
-  -- {
-  --   "jackMort/ChatGPT.nvim",
-  --   config = function() require("chatgpt").setup() end,
-  --   cmd = { "ChatGPT", "ChatGPTEditWithInstructions" },
-  -- },
-  -- Theme
-  -- {
-  --   "RRethy/nvim-base16",
-  --   lazy = false,
-  -- },
 }
