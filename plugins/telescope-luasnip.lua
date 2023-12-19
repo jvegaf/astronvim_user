@@ -4,6 +4,6 @@ return {
   dependecies = { "nvim-telescope/telescope.nvim", "L3MON4D3/LuaSnip" },
   config = function() require("telescope").load_extension "luasnip" end,
   keys = {
-    { "n", "<leader>fs", "<cmd>Telescope luasnip<cr>", { noremap = true, silent = true, desc = "Find Snippets" } },
+    { "n", "<leader>fs", "<cmd>lua require('telescope').extensions.luasnip.luasnip({})<cr>", { noremap = true, silent = true, desc = "Find Snippets" } },
   },
 }
