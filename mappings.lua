@@ -9,8 +9,8 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>c"] = false,
-    ["<A-q>"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
-    ["<A-w>"] = { "<cmd>w<cr>", desc = "Write" },
+    ["Q"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
+    ["W"] = { "<cmd>w<cr>", desc = "Write" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()

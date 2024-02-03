@@ -15,7 +15,6 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
-  -- { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.indent.mini-indentscope" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
@@ -32,6 +31,11 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.dart" },
+  { import = "astrocommunity.pack.kotlin" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.html-css" },
   -- {
   --   "mfussenegger/nvim-jdtls",
   --   opts = {
