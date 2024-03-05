@@ -8,7 +8,6 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>c"] = false,
     ["Q"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close Buffer" },
     ["W"] = { "<cmd>w<cr>", desc = "Write" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -26,12 +25,14 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>x"] = { name = "Diagnostics" },
+    ["<leader>c"] = { false },
+    ["<leader>cc"] = { "gg<S-v>G", desc = "Select All" },
     ["<leader>xc"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Actions" },
     ["<leader>r"] = { name = "Refactor" },
     ["<leader>t"] = { name = "Test" },
     ["<leader>T"] = { name = "Telescope" },
     ["<leader>z"] = { name = "System" },
-    ["<leader>zc"] = { "<cmd>e $MYVIMRC<cr>", desc = "Config" },
+    ["<leader>zc"] = { "<cmd>e $MYAVIMRC<cr>", desc = "Config" },
     ["<leader>zh"] = { "<cmd>checkhealth<cr>", desc = "Health" },
     ["<leader>zn"] = { "<cmd>Telescope notify<cr>", desc = "Notifications" },
     -- ["<Tab>"] = {
@@ -44,7 +45,6 @@ return {
     },
     ["vv"] = { "V", desc = "Visual Line Mode" },
     ["<Esc>"] = { ":nohlsearch<Bar>:echo<CR>", desc = "Cancel search highlighting" },
-    ["<C-a>"] = { "gg<S-v>G", desc = "Select All" },
     ["<A-1>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
     ["<A-2>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
     ["<A-3>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" },
