@@ -34,4 +34,22 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.angular" },
   { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.java" },
+  {
+    "mfussenegger/nvim-jdtls",
+    opts = {
+      settings = {
+        java = {
+          configuration = {
+            runtimes = {
+              {
+                name = "JavaSE-17",
+                path = "/home/jvegaf/.sdkman/candidates/java/17.0.9-tem/",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
 }
